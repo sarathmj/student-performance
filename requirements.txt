@@ -8,6 +8,6 @@ xgboost
 Flask
 pickle
 gunicorn
-# dill
+dill
 # os
 -e .
