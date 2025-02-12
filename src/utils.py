@@ -9,15 +9,17 @@ from sklearn.metrics import r2_score
 from sklearn.model_selection import GridSearchCV
 
 from src.exception import CustomException
+from src.logger import logging
 
 def save_object(file_path, obj):
     try:
         dir_path = os.path.dirname(file_path)
 
         os.makedirs(dir_path, exist_ok=True)
-
+        print(f'the file path given to save object is {file_path}')
         with open(file_path, "wb") as file_obj:
             pickle.dump(obj, file_obj)
+            print(f'the file path given to save object is {file_path} is completed')
 
     except Exception as e:
         raise CustomException(e, sys)
@@ -25,10 +27,12 @@ def save_object(file_path, obj):
 def evaluate_models(X_train, y_train,X_test,y_test,models,param):
     try:
         report = {}
-
+        print("The Evaluation model process is started")
         for i in range(len(list(models))):
             model = list(models.values())[i]
             para=param[list(models.keys())[i]]
+            print(f'The model and param - {model} - {param}')
+            logging.info(f'The model and param - {model} - {param}')
 
             gs = GridSearchCV(model,para,cv=3)
             gs.fit(X_train,y_train)
@@ -55,8 +59,11 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
     
 def load_object(file_path):
     try:
+        print(f'the file path given to load object is {file_path}')
         with open(file_path, "rb") as file_obj:
-            return pickle.load(file_obj)
+            lbj = pickle.load(file_obj)
+            print(f'the file path given to load object is {file_path} is completed')
+            return lbj
 
     except Exception as e:
         raise CustomException(e, sys)
