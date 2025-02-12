@@ -1,11 +1,9 @@
-<!-- <h1>Welcome to the home page</h1> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Performance Prediction</title>
-    <!-- <link rel="stylesheet" href="/static/style.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -22,23 +20,24 @@
         <div class="hero">
             <h1>Predict Student Success</h1>
             <p>Empowering educators with data-driven insights to improve student outcomes.</p>
-            <a href="/predictdata" class="cta-button">Get Started</a>  </div>
+            <a href="/predictdata" class="cta-button">Get Started</a> 
+        </div>
     </header>
 
     <section class="about-us">
         <h2>About Me</h2>
-        <p>
+        <img class="about-us-image" src="{{ url_for('static', filename='images/about_me.png') }}" alt="about me" > <div class="about-us-content">        <p>
             I am a Consultant in Data Science (AI/ML) specializing in applying AI and machine learning techniques 
             to solve complex business challenges.
-        </p>
+        </p></div>
     </section>
 
     <section class="how-it-works">
         <h2>How It Works</h2>
         <p>
-            As a data science enthusiast, I'm fascinated by the power of data to reveal hidden patterns and drive positive change.  
+            As a data science enthusiast, I'm fascinated by the power of data to reveal hidden patterns and drive positive change.  
             I developed this student performance prediction app to explore how machine learning can be applied to improve educational outcomes. 
-            I believe that data-driven insights can empower educators to make more informed decisions and create personalized learning experiences for every student.  
+            I believe that data-driven insights can empower educators to make more informed decisions and create personalized learning experiences for every student.  
             I'm excited to contribute to the intersection of data science and education, using my skills to make a real-world impact.
         </p>
     </section>

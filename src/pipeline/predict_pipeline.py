@@ -22,6 +22,9 @@ class PredictPipeline:
             print("After Loading")
             data_scaled=preprocessor.transform(features)
             preds=model.predict(data_scaled)
+            if preds > 100:
+                preds = 99.99
+
             return preds
         
         except Exception as e:

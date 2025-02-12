@@ -1,0 +1,146 @@
+/* style.css */
+
+/* --- Combined Styles --- */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+/* ... (rest of the form styling - no changes needed) ... */
+
+
+/* --- Hero Image Styles --- */
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    background-image: url("../images/hero-image.jpg"); /* Or your hero image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* --- About Us and How It Works Styles --- */
+
+.about-us, .how-it-works {
+    padding: 40px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex; /* Enable flexbox */
+    flex-wrap: wrap; /* Allow wrapping */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+}
+
+.about-us h2, .how-it-works h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%; /* Full width for headings */
+}
+
+.about-us-image {
+    width: 300px; /* Adjust as needed */
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px; /* For wrapping */
+}
+
+.about-us-content {
+    flex: 1; /* Takes remaining space */
+}
+
+
+/* --- Footer Styles --- */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
