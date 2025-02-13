@@ -25,4 +25,4 @@ jobs:
       with:
        context:
        push: true
-       tags: sarathmj/student_performancen:latest
+       tags: sarathmj/student_performance:latest
